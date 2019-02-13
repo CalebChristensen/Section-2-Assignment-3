@@ -17,7 +17,11 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-dark">Display Details</button>
+      <button 
+      class="btn btn-dark"
+      (click)=onDisplay()>Display Details</button>
+      <p *ngIf=passwordDetails>{{ passwordDetails}}</p>
     </div>
   </div>
 </div>
+<app-clicks *ngFor="let passwords of password"></app-clicks>
