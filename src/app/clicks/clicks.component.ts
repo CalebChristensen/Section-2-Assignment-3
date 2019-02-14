@@ -13,8 +13,5 @@ export class ClicksComponent implements OnInit {
 
   ngOnInit() {
   }
-  // getColor() {
-  //   return this.clickId >= 5 ? 'blue' 
-  // }
 
 }
