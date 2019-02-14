@@ -24,6 +24,6 @@
 </div>
 <div *ngIf=passwordRevealed>
   <div *ngFor="let passwords of password | slice:1; let i = index;">
-    <p>{{i+1}}. The Button was pressed!</p>
+    <p [ngStyle]="{'backgroundColor': (i+1 >4) ? 'blue': 'white'}" [ngClass]="{whitetext: index > 4}">{{i+1}}. The Button was pressed!</p>
   </div>
 </div>
