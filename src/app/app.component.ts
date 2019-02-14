@@ -9,7 +9,9 @@ export class AppComponent implements OnInit {
   title = 'Directives';
   passwordDetails = 'Secret Password = ?'
   passwordRevealed = false;
-  password = ["The Patriots"];
+  password = [""];
+  showSecret = false;
+  log = [];
 
 
   ngOnInit() {
@@ -19,6 +21,11 @@ export class AppComponent implements OnInit {
     this.passwordRevealed = true;
     this.password.push(this.passwordDetails)
     this.passwordDetails = 'Secret Password = La Li Le Lu Lo';
+  }
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }
 

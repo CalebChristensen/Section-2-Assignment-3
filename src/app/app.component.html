@@ -24,6 +24,19 @@
 </div>
 <div *ngIf=passwordRevealed>
   <div *ngFor="let passwords of password | slice:1; let i = index;">
-    <p [ngStyle]="{'backgroundColor': (i+1 >4) ? 'blue': 'white'}" [ngClass]="{whitetext: index > 4}">{{i+1}}. The Button was pressed!</p>
+    <p [ngStyle]="{'backgroundColor': (i+1 >4) ? 'blue': 'white'}" [ngClass]="{'white-text' : i >= 4}">{{i+1}}. The Button was pressed!</p>
   </div>
 </div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-dark" (click)="onToggleDetails()">Display Deails</button>
+      <p *ngIf="showSecret">Secret Password = La Li Le Lu Lo</p>
+      <div 
+      *ngFor="let logItem of log"
+      [ngStyle]="{backgroundColor: logItem >= 5 ? 'lightblue' : 'transparent'}"
+      [ngClass]="{'white-text': logItem >= 5}">{{logItem}}</div>
+    </div>
+  </div>
+</div> -->
+
